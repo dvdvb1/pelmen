@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Доставка домашніх пельменів у Харкові – смачно, швидко, з любов’ю!">
+  <title>Пельмені з дому | Доставка у Харкові</title>
+  <style>
+    :root {
+      --primary-color: #fce8e6;
+      --secondary-color: #fff5f3;
+      --accent-color: #f28b82;
+      --text-color: #333;
+      --card-bg: #fff;
+      --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      --radius: 16px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      color: var(--text-color);
+      background-color: var(--primary-color);
+    }
+
+    header {
+      background-color: var(--secondary-color);
+      padding: 1rem;
+      box-shadow: var(--shadow);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--text-color);
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--accent-color);
+    }
+
+    .carousel {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: 1rem;
+      padding: 1rem;
+    }
+
+    .carousel img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      scroll-snap-align: start;
+      flex-shrink: 0;
+    }
+
+    section {
+      padding: 2rem;
+    }
+
+    h1, h2, h3 {
+      margin-bottom: 1rem;
+    }
+
+    .menu {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .menu-card {
+      background-color: var(--card-bg);
+      padding: 1rem;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      transition: transform 0.3s;
+    }
+
+    .menu-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .menu-card img {
+      width: 100%;
+      border-radius: var(--radius);
+      margin-bottom: 0.5rem;
+    }
+
+    .btn {
+      background-color: var(--accent-color);
+      border: none;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: var(--radius);
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #e76b6b;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      max-width: 400px;
+    }
+
+    input, textarea {
+      padding: 0.75rem;
+      border-radius: var(--radius);
+      border: 1px solid #ccc;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: var(--secondary-color);
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#home">Головна</a></li>
+        <li><a href="#about">Про нас</a></li>
+        <li><a href="#menu">Меню</a></li>
+        <li><a href="#contact">Контакти</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home">
+      <h1>Ласкаво просимо до "Пельмені з дому"</h1>
+      <p>Справжні домашні пельмені з доставкою по Харкову. Гарячі, смачні та з любов'ю!</p>
+    </section>
+
+    <div class="carousel">
+      <img src="1.jpg" alt="Класичні пельмені">
+      <img src="2.jpg" alt="Пельмені з яловичиною">
+      <img src="3.jpg" alt="Пельмені з куркою">
+      <img src="4.jpg" alt="Вегетаріанські пельмені">
+    </div>
+
+    <section id="about">
+      <h2>Наша історія</h2>
+      <p>"Пельмені з дому" – це сімейний бізнес, який почався з любові до домашньої кухні. Ми передаємо тепло кожної пельмени, створеної вручну з найкращих інгредієнтів. Наші рецепти — це суміш традицій та сучасності, смаку та турботи.</p>
+    </section>
+
+    <section id="menu">
+      <h2>Наше меню</h2>
+      <div class="menu">
+        <div class="menu-card">
+          <img src="1.jpg" alt="Класичні пельмені">
+          <h3>Класичні пельмені</h3>
+          <p>Зі свининою та яловичиною – 300г</p>
+          <p><strong>120 грн</strong></p>
+        </div>
+        <div class="menu-card">
+          <img src="2.jpg" alt="Пельмені з куркою">
+          <h3>Пельмені з куркою</h3>
+          <p>Ніжні та соковиті – 300г</p>
+          <p><strong>110 грн</strong></p>
+        </div>
+        <div class="menu-card">
+          <img src="3.jpg" alt="Вегетаріанські пельмені">
+          <h3>Вегетаріанські пельмені</h3>
+          <p>З грибами та зеленню – 300г</p>
+          <p><strong>115 грн</strong></p>
+        </div>
+        <div class="menu-card">
+          <img src="4.jpg" alt="Гострі пельмені">
+          <h3>Гострі пельмені</h3>
+          <p>З додаванням перцю чилі – 300г</p>
+          <p><strong>125 грн</strong></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Контакти</h2>
+      <p>м. Харків, вул. Смачненька, 12</p>
+      <p>Телефон: <a href="tel:+380931234567">+38 (093) 123-45-67</a></p>
+      <form>
+        <label for="name">Ім’я</label>
+        <input type="text" id="name" placeholder="Ваше ім’я">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Ваш email">
+        <label for="message">Повідомлення</label>
+        <textarea id="message" rows="4" placeholder="Ваше питання або замовлення..."></textarea>
+        <button class="btn" type="submit">Надіслати</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Пельмені з дому. Всі права захищено.</p>
+  </footer>
+</body>
+
+</html>
